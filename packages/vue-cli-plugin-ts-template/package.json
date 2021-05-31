@@ -1,6 +1,6 @@
 {
   "name": "vue-cli-plugin-ts-template",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "vue 生成typescript模板",
   "keywords": [
     "vue",
