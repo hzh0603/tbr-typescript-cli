@@ -1,0 +1,27 @@
+{
+  "name": "vue-cli-plugin-ts-template",
+  "version": "0.0.0",
+  "description": "vue 生成typescript模板",
+  "keywords": [
+    "vue",
+    "typescript",
+    "template"
+  ],
+  "author": "hzh0603 <1165934120@qq.com>",
+  "homepage": "",
+  "license": "ISC",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "dependencies": {
+    "chalk": "^4.1.1"
+  }
+}

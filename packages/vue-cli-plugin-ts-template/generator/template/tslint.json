@@ -1,0 +1,28 @@
+{
+  "tsConfig参考配置": [
+    "https://zhuanlan.zhihu.com/p/29970355"
+  ],
+  "defaultSeverity": "warning",
+  "extends": [
+    "tslint:recommended"
+  ],
+  "linterOptions": {
+    "exclude": [
+      "node_modules/**"
+    ]
+  },
+  "rules": {
+    "indent": [true, "spaces", 2],
+    "interface-name": false,
+    "no-consecutive-blank-lines": false,
+    "object-literal-sort-keys": false,
+    "ordered-imports": false,
+    "quotemark": false,
+    "semicolon": false,
+    "member-access": false,
+    "max-line-length":[false,120],
+    "eofline": false,
+    "whitespace": false,
+    "no-trailing-whitespace": false
+  }
+}
