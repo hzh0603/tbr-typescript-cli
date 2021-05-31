@@ -1,8 +1,5 @@
 {
     "plugins": {
-      "@vue/cli-plugin-eslint": {
-        "prompts": true
-      },
       "vue-cli-plugin-ts-template": {
         "prompts": true
       }
