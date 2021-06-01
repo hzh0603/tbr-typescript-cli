@@ -19,7 +19,8 @@ function extendPackage(api) {
             "less-loader": "^5.0.0",
             "typescript": "~4.1.5",
             "vue-template-compiler": "^2.6.11"
-          }
+          },
+          "browserslist": undefined
     })
 }
 
