@@ -1,0 +1,30 @@
+{
+  "name": "vue-cli-plugin-ui-template",
+  "version": "1.0.0",
+  "description": "vue ts模板UI选择",
+  "keywords": [
+    "typescript",
+    "elememtUI"
+  ],
+  "author": "hzh0603 <1165934120@qq.com>",
+  "homepage": "https://github.com/hzh0603/tbr-typescript-cli#readme",
+  "license": "ISC",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hzh0603/tbr-typescript-cli.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "bugs": {
+    "url": "https://github.com/hzh0603/tbr-typescript-cli/issues"
+  }
+}
