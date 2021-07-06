@@ -18,6 +18,27 @@ const routes: RouteConfig[] = [
     // which is lazy-loaded when the route is visited.
     component: () => import(/* webpackChunkName: "about" */ '../views/about'),
   },
+  {
+    path: '/adminLayout',
+    name: 'adminLayout',
+    component: () => import('../layouts/adminLayout'),
+    children: [
+      {
+        path: 'home',
+        name: 'adminHome',
+        component: Home
+      },
+      {
+        path: 'error/:type',
+        name: 'error',
+        component: () => import('../views/error')
+      }
+    ]
+  },
+  {
+    path: '*',
+    redirect: '/adminLayout/error/404'
+  }
 ];
 
 const router = new VueRouter({
