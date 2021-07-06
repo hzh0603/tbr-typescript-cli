@@ -23,6 +23,7 @@
     "max-line-length":[false,120],
     "eofline": false,
     "whitespace": false,
-    "no-trailing-whitespace": false
+    "no-trailing-whitespace": false,
+    "no-unused-vars": false
   }
 }

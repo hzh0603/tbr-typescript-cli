@@ -1,15 +1,22 @@
 const fs = require('fs')
 module.exports = (api) => {
-    let renderPage = {};
+    let renderPage = {
+        './src/router/index.ts': './template/src/router/index.ts',
+        './src/views/error/index.tsx': './template/src/views/error/index.tsx',
+    };
     // 获取选择的UI组件类型
     const { ui, importStyle } = api.options
     let dependencies = {}
     if(ui === 'element') {
         dependencies['element-ui'] = '2.15.3'
-        renderPage['./src/plugins/element.js'] = './template/src/plugins/element.js'
+        renderPage['./src/plugins/element.ts'] = './template/src/plugins/element.ts'
+        renderPage['./src/layouts/adminLayout/index.less'] = './template/src/layouts/element/adminLayout/index.less'
+        renderPage['./src/layouts/adminLayout/index.tsx'] = './template/src/layouts/element/adminLayout/index.tsx'
     } else {
         dependencies['ant-design-vue'] = '1.7.6'
-        renderPage['./src/plugins/antdv.js'] = './template/src/plugins/antdv.js'
+        renderPage['./src/plugins/antdv.ts'] = './template/src/plugins/antdv.ts'
+        renderPage['./src/layouts/adminLayout/index.less'] = './template/src/layouts/antdv/adminLayout/index.less'
+        renderPage['./src/layouts/adminLayout/index.tsx'] = './template/src/layouts/antdv/adminLayout/index.tsx'
     }
     if(importStyle === 'part') {
         dependencies['babel-plugin-component'] = '^1.1.1'
@@ -19,7 +26,7 @@ module.exports = (api) => {
     })
     api.render(renderPage, api.options);
 
-    api.injectImports('src/main.ts', `import './plugins/${ui}.js'`)
+    api.injectImports('src/main.ts', `import './plugins/${ui}.ts'`)
 
     api.onCreateComplete(() => {
         // 局部引用处理按需加载

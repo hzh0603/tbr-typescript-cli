@@ -29,7 +29,7 @@ class UserModule extends VuexModule {
  * 获取用户信息
  * @returns 
  */
-function fetchUser(): Promise<{firstName: string,lastName:string}> {
+function fetchUser(): Promise<{firstName: string,lastName: string}> {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
             resolve({

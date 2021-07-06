@@ -18,7 +18,7 @@ export default class Home extends Vue {
       return (
         <div class="home">
           <img alt="Vue logo" src={logo} />
-          <p title="点击通过store切换名称" onclick={this.handleClick}>hello{this.name}</p>
+          <p title="点击通过store切换名称" onclick={this.handleClick}>hello: {this.name}</p>
           <HelloWorld msg="Welcome to Your Vue.js + TypeScript App" />
         </div>
       )
