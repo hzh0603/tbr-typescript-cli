@@ -2,6 +2,9 @@
     "plugins": {
       "vue-cli-plugin-ts-template": {
         "prompts": true
+      },
+      "vue-cli-plugin-ui-template": {
+        "prompts": true
       }
     }
   }
