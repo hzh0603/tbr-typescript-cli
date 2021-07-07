@@ -3,11 +3,7 @@ import HelloWorld from '@/components/helloWorld';
 import logo from '@/assets/logo.png';
 import { userModule } from '@/store/modules'
 import './index.less'
-@Component({
-  components: {
-    HelloWorld,
-  },
-})
+@Component
 export default class Home extends Vue {
     get name() {
       // return userModule.firstName + userModule.lastName

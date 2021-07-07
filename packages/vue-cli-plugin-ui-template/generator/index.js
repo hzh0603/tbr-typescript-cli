@@ -20,7 +20,13 @@ module.exports = (api) => {
         renderPage['./src/layouts/adminLayout/index.tsx'] = './template/src/layouts/antdv/adminLayout/index.tsx'
     }
     if(importStyle === 'part') {
-        devDependencies['babel-plugin-component'] = '^1.1.1'
+        // elementUI 和 antd 按需加载组件的包不一样
+        if(ui === 'element') {
+            devDependencies['babel-plugin-component'] = '^1.1.1'
+        } else {
+            devDependencies['babel-plugin-import'] = '^1.13.3'
+        }
+        
     }
     api.extendPackage({
         dependencies,
