@@ -9,6 +9,7 @@ const routes: RouteConfig[] = [
     path: '/',
     name: 'Home',
     component: Home,
+    redirect: '/adminLayout/home'
   },
   {
     path: '/about',

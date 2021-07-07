@@ -5,9 +5,6 @@ import 'ant-design-vue/dist/antd.css';
 Vue.use(Antd);
 <%} else {%>
 import { 
-    Base,
-    version,
-    install,
     message,
     notification,
     Affix,
@@ -74,7 +71,6 @@ import {
     PageHeader,
     Space,
 } from 'ant-design-vue';
-Vue.use(Base)
 Vue.use(Affix)
 Vue.use(Anchor)
 Vue.use(AutoComplete)

@@ -7,6 +7,7 @@ module.exports = (api) => {
     // 获取选择的UI组件类型
     const { ui, importStyle } = api.options
     let dependencies = {}
+    let devDependencies = {}
     if(ui === 'element') {
         dependencies['element-ui'] = '2.15.3'
         renderPage['./src/plugins/element.ts'] = './template/src/plugins/element.ts'
@@ -19,10 +20,11 @@ module.exports = (api) => {
         renderPage['./src/layouts/adminLayout/index.tsx'] = './template/src/layouts/antdv/adminLayout/index.tsx'
     }
     if(importStyle === 'part') {
-        dependencies['babel-plugin-component'] = '^1.1.1'
+        devDependencies['babel-plugin-component'] = '^1.1.1'
     }
     api.extendPackage({
-        dependencies
+        dependencies,
+        devDependencies
     })
     api.render(renderPage, api.options);
 
@@ -32,7 +34,7 @@ module.exports = (api) => {
         // 局部引用处理按需加载
         if(importStyle === 'part') {
             let pluginComponent = [];
-            if(ui === 'Element') {
+            if(ui === 'element') {
                 pluginComponent = ['component', { 'libraryName': 'element-ui', 'styleLibraryName': 'theme-chalk'}] 
             } else {
                 pluginComponent = ["import", { "libraryName": "ant-design-vue", "libraryDirectory": "es", "style": "css" }]
@@ -43,7 +45,7 @@ module.exports = (api) => {
             bableConfig.plugins = bableConfig.plugins || []
             bableConfig.plugins.push(pluginComponent)
             // 重新写入babel.config.js
-            fs.writeFileSync(rcPath, JSON.stringify(bableConfig, null, 2), {encoding: 'utf8'})
+            fs.writeFileSync(rcPath, `module.exports = ${JSON.stringify(bableConfig, null, 2)}`, {encoding: 'utf8'})
         }
     })
 }

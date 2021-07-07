@@ -24,6 +24,7 @@
     "eofline": false,
     "whitespace": false,
     "no-trailing-whitespace": false,
-    "no-unused-vars": false
+    "no-unused-vars": false,
+    "trailing-comma": false
   }
 }
