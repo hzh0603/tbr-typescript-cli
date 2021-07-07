@@ -7,7 +7,7 @@ class UserModule extends VuexModule {
   lastName = "仔豪";
   // getters
   get fullName() {
-    return this.firstName + " " + this.lastName;
+    return this.firstName + this.lastName;
   }
   @Mutation
   setFirstName(firstName: string) {
