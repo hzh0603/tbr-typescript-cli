@@ -10,6 +10,7 @@
   "homepage": "https://github.com/hzh0603/tbr-typescript-cli#readme",
   "license": "ISC",
   "main": "index.js",
+  
   "repository": {
     "type": "git",
     "url": "git+https://github.com/hzh0603/tbr-typescript-cli.git"
